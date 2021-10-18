@@ -1,0 +1,12 @@
+def strrev(i,j,s):
+    if i>=j:
+        return s
+    else:
+        s[i],s[j]=s[j],s[i]
+
+        return strrev(i+1,j-1,s)
+    
+s=input()
+s=list(s)
+result=strrev(0,len(s)-1,s)
+print(''.join(result))
